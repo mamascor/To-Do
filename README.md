@@ -12,6 +12,8 @@
 
 
 
+> Initializing persistent container 
+
 ```
 
 class CoreDataManager {
