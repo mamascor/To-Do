@@ -12,4 +12,23 @@
 
 
 
+```
 
+class CoreDataManager {
+    
+    let persistenceContainer: NSPersistentContainer
+    
+    static let shared = CoreDataManager()
+    
+    
+    private init(){
+        persistenceContainer = NSPersistentContainer(name: "TodoModel")
+        persistenceContainer.loadPersistentStores { desc, error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+    }
+}
+
+```
